@@ -1,15 +1,15 @@
 
 首先理清一遍爬虫的基本骨架
 
-基础爬虫由四部分组成：1.url管理器
-				      2.html下载器
-				      3.html解析器
-					  4.信息输出器
+基础爬虫由四部分组成：	       1.url管理器
+				2.html下载器
+				3.html解析器
+				4.信息输出器
 
 四者的运作关系是：1.url管理器为html下载器提供下载页面的链接
-				  2.html下载器为html解析器提供html
-				  3.html解析器解析网页获得有用的信息递给信息输出器，并且向url管理器提供待下载的页面链接
-				  4.信息输出器管理爬取得到的信息（以各种方式）
+		  2.html下载器为html解析器提供html
+		  3.html解析器解析网页获得有用的信息递给信息输出器，并且向url管理器提供待下载的页面链接
+		  4.信息输出器管理爬取得到的信息（以各种方式）
 这个运作关系为基础，可以合并或者细分来实现更多功能
 在html下载器中可以进行很多的反爬虫策略，比如添加头文件，使用代理ip池，验证码验证等
 
@@ -22,13 +22,13 @@
 最后学习一下爬虫的基本骨架~
 
 文件列表：1.Downloader.py   		#html下载器类
-		  2.Parser.py				#html解析器类
-		  3.UrlManager.py			#url管理器类
-		  4.Output.py				#信息输出器类
-		  5.ProxyPool_threading.py 	#使用多线程和队列创建进程池（西刺）
-		  6.ip_pool.txt				#进程池文件
-		  7.baike_Spider.html		#存储爬取到的词条信息
-		  8.Spider_main.py			#运行主程序		
+	  2.Parser.py				#html解析器类
+	  3.UrlManager.py			#url管理器类
+	  4.Output.py				#信息输出器类
+	  5.ProxyPool_threading.py 	#使用多线程和队列创建进程池（西刺）
+	  6.ip_pool.txt				#进程池文件
+	  7.baike_Spider.html		#存储爬取到的词条信息
+	  8.Spider_main.py			#运行主程序		
 		  
 运行主程序后需要输入第一个词条的链接
 本项目使用两个队列作为四部分的传输带，url_queue和html_queue
